@@ -9,21 +9,21 @@ public class EmployeesRepository(AppDbContext context) :  IEmployeesRepository
 {
     public async Task<IEnumerable<Employee>> GetEmployeesAsync()
     {
-        return await context.employees.ToListAsync();
+        return await context.Employees.ToListAsync();
     }
 
     public async Task<Employee?> GetEmployeeAsync(int id)
     {
-        return await context.employees.FindAsync(id);
+        return await context.Employees.FindAsync(id);
     }
 
     public async Task CreateEmployeeAsync(Employee employee)
     {
-        await context.employees.AddAsync(employee);
+        await context.Employees.AddAsync(employee);
         await context.SaveChangesAsync();
     }
 
-    public async Task UpdateEmployeeAsync(Employee employee)
+    public Task UpdateEmployeeAsync(Employee employee)
     {
         throw new NotImplementedException();
     }
