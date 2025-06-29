@@ -23,13 +23,19 @@ public class EmployeesRepository(AppDbContext context) :  IEmployeesRepository
         await context.SaveChangesAsync();
     }
 
-    public Task UpdateEmployeeAsync(Employee employee)
+    public async Task UpdateEmployeeAsync(Employee employee)
     {
-        throw new NotImplementedException();
+        context.Employees.Update(employee);
+        await context.SaveChangesAsync();
     }
 
-    public Task DeleteEmployeeAsync(int id)
+    public async Task DeleteEmployeeAsync(int id)
     {
-        throw new NotImplementedException();
+        var employeeInDb = await context.Employees.FindAsync(id);
+        if (employeeInDb == null)
+        {
+            throw new KeyNotFoundException($"Employee with id {id} not found");
+        }
+        context.Employees.Remove(employeeInDb);
     }
 }

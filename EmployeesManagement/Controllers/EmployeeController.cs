@@ -28,4 +28,22 @@ public class EmployeeController(IEmployeesRepository repository) : ControllerBas
         await repository.CreateEmployeeAsync(employee);
         return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
     }
+
+    [HttpPut("{id}")]
+    public async Task<ActionResult<Employee>> UpdateEmployeeAsync(int id, Employee employee)
+    { 
+        if (id != employee.Id)
+        {
+            return BadRequest();
+        }
+        await repository.UpdateEmployeeAsync(employee);
+        return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<Employee>> DeleteEmployeeById(int id)
+    {
+        await repository.DeleteEmployeeAsync(id);
+        return NoContent();
+    }
 }
