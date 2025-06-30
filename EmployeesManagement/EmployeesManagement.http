@@ -1,0 +1,39 @@
+@EmployeesManagement_HostAddress = https://localhost:7025
+
+
+GET {{EmployeesManagement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{EmployeesManagement_HostAddress}}/api/employee
+
+###
+
+GET {{EmployeesManagement_HostAddress}}/api/employee/1
+
+###
+
+POST {{EmployeesManagement_HostAddress}}/api/Employee
+Content-Type: application/json
+
+{
+  "FirstName": "douze",
+  "LastName": "string",
+  "Email": "string",
+  "PhoneNumber": "string",
+  "Position": "string"
+}
+
+###
+
+PUT https://localhost:7025/api/Employee/2
+Content-Type: application/json
+
+{
+  "FirstName": "Deux",
+  "LastName": "test",
+  "Email": "change",
+  "PhoneNumber": "string",
+  "Position": "string",
+  "Id": 2
+}
