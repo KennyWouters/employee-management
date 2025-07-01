@@ -1,1 +1,3 @@
-Employee management web app
+Employee management web app/ ASPNET core web API
+
+It'a simple crud app for demonstration. Using ASPNET core web API and Angular frontend. All from scratch. Bootstrap classes for navigation bar and form.
