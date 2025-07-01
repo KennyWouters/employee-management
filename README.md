@@ -19,10 +19,10 @@ A RESTful API for managing employees, built with ASP.NET Core 9, Entity Framewor
 ### Setup
 1. **Clone the repository:**
    ```bash
-   git clone <your-repo-url>
+   git clone <repo address>
    cd EmployeesManagement
    ```
-2. **Start SQL Server with Docker:**
+2. **Start SQL Server with Docker/Podman:**
    ```bash
    docker/Podman-compose up -d
    ```
