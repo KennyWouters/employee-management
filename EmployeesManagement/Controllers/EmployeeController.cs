@@ -25,6 +25,10 @@ public class EmployeeController(IEmployeesRepository repository) : ControllerBas
     [HttpPost]
     public async Task<ActionResult<Employee>> CreateEmployeeAsync(Employee employee)
     {
+        if (ModelState.IsValid == false)
+        {
+            return BadRequest();
+        }
         await repository.CreateEmployeeAsync(employee);
         return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
     }
@@ -36,6 +40,12 @@ public class EmployeeController(IEmployeesRepository repository) : ControllerBas
         {
             return BadRequest();
         }
+        
+        if (ModelState.IsValid == false)
+        {
+            return BadRequest();
+        }
+        
         await repository.UpdateEmployeeAsync(employee);
         return CreatedAtRoute("GetEmployee", new { id = employee.Id }, employee);
     }

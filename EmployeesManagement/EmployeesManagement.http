@@ -32,7 +32,7 @@ Content-Type: application/json
 {
   "FirstName": "Deux",
   "LastName": "test",
-  "Email": "change",
+  "Email": "change@change.com",
   "PhoneNumber": "string",
   "Position": "string",
   "Id": 2

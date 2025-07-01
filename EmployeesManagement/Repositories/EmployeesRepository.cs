@@ -37,5 +37,6 @@ public class EmployeesRepository(AppDbContext context) :  IEmployeesRepository
             throw new KeyNotFoundException($"Employee with id {id} not found");
         }
         context.Employees.Remove(employeeInDb);
+        await context.SaveChangesAsync();
     }
 }
