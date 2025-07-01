@@ -8,13 +8,13 @@ A RESTful API for managing employees, built with ASP.NET Core 9, Entity Framewor
 - Entity Framework Core with SQL Server
 - OpenAPI/Swagger documentation
 - CORS enabled for frontend integration (default: http://localhost:4200)
-- Docker Compose for SQL Server setup
+- Docker/Podman Compose for SQL Server setup
 
 ## Getting Started
 
 ### Prerequisites
 - [.NET 9 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
-- [Docker](https://www.docker.com/products/docker-desktop) (for local SQL Server)
+- [Docker/Podman](https://www.docker.com/products/docker-desktop, https://podman.io) (for local SQL Server)
 
 ### Setup
 1. **Clone the repository:**
@@ -24,7 +24,7 @@ A RESTful API for managing employees, built with ASP.NET Core 9, Entity Framewor
    ```
 2. **Start SQL Server with Docker:**
    ```bash
-   docker-compose up -d
+   docker/Podman-compose up -d
    ```
    This will start a SQL Server instance on `localhost:1433` with the credentials in `docker-compose.yml`.
 
