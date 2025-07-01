@@ -1,6 +1,6 @@
 # Employees Management API
 
-A RESTful API for managing employees, built with ASP.NET Core 9, Entity Framework Core, and SQL Server. This project provides endpoints to create, read, update, and delete employee records, and is ready for local development with Docker support for the database.
+A RESTful API for managing employees, built with ASP.NET Core 9, Entity Framework Core, and SQL Server. This project provides endpoints to create, read, update, and delete employee records, and is ready for local development with Docker/Podman support for the database.
 
 ## Features
 - CRUD operations for employees
